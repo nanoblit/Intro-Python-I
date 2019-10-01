@@ -13,12 +13,10 @@ if len(sys.argv) > 1:
   print(sys.argv[1])
 
 # Print out the OS platform you're using:
-if len(sys.argv) > 2:
-  print(sys.argv[2])
+print(sys.platform)
 
 # Print out the version of Python you're using:
-if len(sys.argv) > 3:
-  print(sys.argv[3])
+print(sys.version)
 
 
 import os
