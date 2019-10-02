@@ -22,3 +22,19 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+year = datetime.today().year
+month = datetime.today().month
+
+if len(sys.argv) < 2 or len(sys.argv) > 3:
+  print("usage:")
+  print("[program] to print calendar for the current month")
+  print("[program] [month] to print calendar for the given month (as a number) in the current yaear")
+  print("[program] [month] [year] to print calendar for the given month (as a number) in the given yaear")
+  print()
+elif len(sys.argv) > 1:
+  month = int(sys.argv[1])
+  if len(sys.argv) > 2:
+    year = int(sys.argv[2])
+
+print(calendar.month(year, month))
